@@ -1,0 +1,70 @@
+html,body,[class*="css"]{font-family:'DM Sans',sans-serif;color:var(--ink)}.brand-lockup{display:flex;align-items:center;gap:10px;margin:2px 0 4px;font:750 20px Manrope,sans-serif;letter-spacing:-.4px;color:var(--ink)}.brand-lockup img{width:32px;height:32px;object-fit:contain}.stApp{background:var(--paper);color:var(--ink)}.block-container{max-width:1420px;padding:2rem 2.5rem 4rem}.hero{padding:30px 34px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(110deg,var(--surface) 0%,var(--surface-raised) 100%);margin-bottom:22px}.hero-brand{display:flex;align-items:center;gap:11px;margin-bottom:18px}.hero-brand img{width:38px;height:38px;object-fit:contain}.hero-brand-name{font:750 17px Manrope,sans-serif;letter-spacing:-.3px;color:var(--ink);margin-bottom:3px}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:700;color:var(--teal)}.hero h1{font:800 35px Manrope,sans-serif;letter-spacing:-1.2px;margin:8px 0;color:var(--ink)}.hero p{margin:0;color:var(--muted);max-width:760px;font-size:15px}.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:0 5px 18px #173e3810}.metric-label{font-size:12px;color:var(--muted);font-weight:600}.metric-value{font:800 27px Manrope,sans-serif;margin:7px 0 0;color:var(--ink)}.section-title{font:700 22px Manrope,sans-serif;margin:20px 0 8px;color:var(--ink)}.result-positive{border-left:4px solid var(--red);background:var(--result-positive-bg);color:var(--ink);padding:19px 22px;border-radius:12px}.result-negative{border-left:4px solid var(--green);background:var(--result-negative-bg);color:var(--ink);padding:19px 22px;border-radius:12px}.disclaimer{border:1px solid var(--notice-border);background:var(--notice);color:var(--notice-ink);padding:13px 16px;border-radius:10px;font-size:12px}.stButton>button{border-radius:9px;font-weight:700;min-height:42px}.stTabs [data-baseweb="tab-list"]{gap:9px}.stTabs [data-baseweb="tab"]{background:var(--surface);border:1px solid var(--line);border-radius:9px 9px 0 0;padding:9px 16px;color:var(--ink)}.stDataFrame{border:1px solid var(--line);border-radius:12px;overflow:hidden}section[data-testid="stSidebar"]{background:var(--sidebar);border-right:1px solid var(--line)}section[data-testid="stSidebar"] [data-testid="stSidebarContent"]{background:var(--sidebar)}
+/* Keep every Streamlit-owned surface and control aligned with the app toggle. */
+.stApp [data-testid="stMain"],.stApp [data-testid="stMainBlockContainer"]{background:var(--paper);color:var(--ink)}
+.stApp p,.stApp li,.stApp label,.stApp [data-testid="stCaptionContainer"],.stApp [data-testid="stMarkdownContainer"],.stApp [data-testid="stWidgetLabel"]{color:var(--ink)}
+.stApp [data-testid="stCaptionContainer"]{color:var(--muted)}
+.stApp input,.stApp textarea,.stApp [data-baseweb="select"]>div,.stApp [data-testid="stNumberInput"] button{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.stApp [data-testid="stDataFrame"]{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.stApp [data-testid="stDataFrame"] iframe{color-scheme:inherit}
+.stApp [data-testid="stAlert"]{background:var(--surface);color:var(--ink)}
+.stApp [data-testid="stFileUploader"] section{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.stApp [data-testid="stForm"]{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.stApp [data-testid="stRadio"] label{color:var(--ink)}
+/* The appearance radio owns app colors, so explicitly skin Streamlit's outer
+   chrome too; otherwise a dark browser theme can leave header/widgets mismatched. */
+html,body,.stApp,[data-testid="stAppViewContainer"],[data-testid="stMain"],main,[data-testid="stMainBlockContainer"]{background:var(--paper)!important;color:var(--ink)!important;color-scheme:inherit}
+header[data-testid="stHeader"]{background:color-mix(in srgb,var(--paper) 85%,transparent)!important;color:var(--ink)!important;backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border-bottom:1px solid color-mix(in srgb,var(--line) 55%,transparent)}
+/* Pin Streamlit's native drawer controls halfway down the drawer edge. */
+section[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"]{position:fixed!important;top:50vh!important;left:calc(min(21rem, 90vw) - 18px)!important;transform:translateY(-50%)!important;z-index:2147483000!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;}
+section[data-testid="stSidebar"][data-collapsed="true"] [data-testid="stSidebarCollapseButton"]{display:none!important;}
+section[data-testid="stSidebar"][data-collapsed="false"] [data-testid="stSidebarCollapseButton"]{display:flex!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;}
+section[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button,
+header[data-testid="stHeader"] [data-testid="stExpandSidebarButton"]{width:36px!important;height:54px!important;border:1px solid var(--line)!important;border-radius:0 12px 12px 0!important;background:var(--surface)!important;color:var(--ink)!important;box-shadow:0 3px 14px #0003!important;opacity:1!important;visibility:visible!important;transition:background .18s ease,box-shadow .18s ease,transform .18s ease!important;}
+section[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button:hover,
+header[data-testid="stHeader"] [data-testid="stExpandSidebarButton"]:hover{background:var(--surface-raised)!important;box-shadow:0 5px 18px #0004!important;}
+header[data-testid="stHeader"] [data-testid="stExpandSidebarButton"]{position:fixed!important;left:0!important;top:50vh!important;transform:translateY(-50%)!important;z-index:2147483000!important;pointer-events:auto!important;}
+header[data-testid="stHeader"] [data-testid="stExpandSidebarButton"]{border-left:0!important;}
+@media(max-width:768px){section[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"]{left:calc(min(18rem, 88vw) - 18px)!important}}
+header[data-testid="stHeader"] [data-testid="stToolbar"]{background:transparent!important}
+/* Brand lockup animates from toolbar left to toolbar center with drawer state. */
+.topbar-brand{position:fixed;z-index:1000001;top:5px;left:0;right:auto;transform:translateX(0);height:50px;margin:0;padding:0 18px;display:flex;align-items:center;gap:11px;color:var(--ink);pointer-events:none;transition:left .4s cubic-bezier(.4,0,.2,1),transform .4s cubic-bezier(.4,0,.2,1);}
+body:has(section[data-testid="stSidebar"][data-collapsed="true"]) .topbar-brand{left:50%;transform:translateX(-50%)}
+body:has(section[data-testid="stSidebar"][data-collapsed="false"]) .topbar-brand{left:0;transform:translateX(0)}
+@media(max-width:700px){.topbar-brand{left:50%;transform:translateX(-50%)}body:has(section[data-testid="stSidebar"][data-collapsed="false"]) .topbar-brand{left:0;transform:translateX(0)}}
+.topbar-brand img{width:38px;height:38px;object-fit:contain;}
+.topbar-brand>div{display:flex;flex-direction:column;gap:1px;}
+.topbar-brand .hero-brand-name{font:750 17px Manrope,sans-serif;letter-spacing:-.3px;color:var(--ink);margin:0 0 2px;}
+.topbar-brand .eyebrow{font:700 9px 'DM Sans',sans-serif;letter-spacing:.15em;line-height:1.2;color:var(--teal);}
+@media(max-width:700px){.topbar-brand{top:7px;height:44px;padding:0 12px;gap:8px}.topbar-brand img{width:30px;height:30px}.topbar-brand .hero-brand-name{font-size:14px}.topbar-brand .eyebrow{font-size:7px}}
+/* Keep Streamlit's menu available for the other viewer/developer actions. */
+section[data-testid="stSidebar"],section[data-testid="stSidebar"] [data-testid="stSidebarContent"]{background:var(--sidebar)!important;color:var(--ink)!important}
+.stApp [data-testid="stVerticalBlock"]>div,.stApp [data-testid="stElementContainer"]{color:var(--ink)}
+.stApp [data-baseweb="input"]>div,.stApp [data-baseweb="select"]>div,.stApp [data-testid="stNumberInput"] button,.stApp textarea,.stApp input{background:var(--surface)!important;color:var(--ink)!important;border-color:var(--line)!important}
+.stApp [data-testid="stForm"],.stApp [data-testid="stAlert"],.stApp [data-testid="stFileUploader"] section{background:var(--surface)!important;color:var(--ink)!important;border-color:var(--line)!important}
+.stApp button{color:var(--ink)}
+.stApp [data-testid="stDataFrame"]{background:var(--surface)!important;color:var(--ink)!important;border-color:var(--line)!important}
+.stApp [data-testid="stRadio"] [role="radiogroup"]{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px}
+.stApp [data-testid="stRadio"] [role="radio"]{color:var(--ink)}
+/* Workspace choices are deliberately a clean text list, not radio-button dots. */
+section[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"]{display:flex;flex-direction:column;align-items:stretch;gap:3px;background:transparent;border:0;border-radius:0;padding:0}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label{padding:8px 10px;border-radius:8px;transition:background .15s ease,color .15s ease}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover{background:var(--surface-raised)}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked){background:var(--surface-raised);color:var(--teal);font-weight:700}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label>div:first-child{display:none}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label p{color:inherit!important;margin:0}
+/* Segmented appearance toggle: light selection stays white with dark lettering,
+   and its hover state shades gently without affecting dark mode. */
+section[data-testid="stSidebar"] [data-testid="stButtonGroup"] [role="radiogroup"]{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:12px;background:var(--surface);}
+section[data-testid="stSidebar"] [data-testid="stButtonGroup"] [role="radio"]{flex:1;justify-content:center;padding:7px 10px;border-radius:8px;background:transparent;color:var(--ink)!important;transition:background .15s ease,color .15s ease;}
+section[data-testid="stSidebar"] [data-testid="stButtonGroup"] [role="radio"]:hover{background:var(--surface-raised);color:var(--ink)!important;}
+section[data-testid="stSidebar"] [data-testid="stButtonGroup"] [role="radio"][data-selected]{background:var(--surface);color:var(--ink)!important;box-shadow:0 1px 4px #0002;font-weight:700;}
+section[data-testid="stSidebar"] [data-testid="stButtonGroup"] [role="radio"][data-selected]:hover{background:var(--surface-raised);}
+section[data-testid="stSidebar"] [data-testid="stButtonGroup"] [role="radio"] *{color:inherit!important;}
+/* In light mode the second pill (Dark) stays white with dark icon and text. */
+:root[style*="color-scheme:light"] section[data-testid="stSidebar"] [data-testid="stButtonGroup"] [role="radio"]:nth-child(2){background:#fff;color:#183532!important;}
+:root[style*="color-scheme:light"] section[data-testid="stSidebar"] [data-testid="stButtonGroup"] [role="radio"]:nth-child(2):hover{background:#e8efed;color:#183532!important;}
+/* Keep nav labels crisp and give their bullet/radio marker a theme-aware hover. */
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:hover{background:var(--surface-raised);}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked){background:var(--surface-raised);color:var(--teal);font-weight:700;}
+
+@media(max-width:700px){.block-container{padding:1rem}.hero{padding:22px}.hero h1{font-size:27px}}

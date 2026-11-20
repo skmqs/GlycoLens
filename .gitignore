@@ -1,0 +1,23 @@
+# Python runtime and local environments
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Local runtime data and credentials
+/data/history.sqlite3
+/Light_theme.jpg
+/Dark_theme.jpg
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Tooling / OS files
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db

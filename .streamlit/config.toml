@@ -1,0 +1,24 @@
+[theme]
+# Lock Streamlit's chrome to one theme so the menu does not expose its
+# System / Light / Dark selector. The in-app segmented control owns app themes.
+base = "dark"
+primaryColor = "#66c7b5"
+backgroundColor = "#101a19"
+secondaryBackgroundColor = "#182321"
+textColor = "#e7f1ef"
+borderColor = "#304340"
+linkColor = "#80d4c4"
+codeBackgroundColor = "#1d2d2a"
+font = "sans-serif"
+headingFont = "sans-serif"
+baseRadius = "medium"
+showWidgetBorder = true
+showSidebarBorder = true
+chartCategoricalColors = ["#66c7b5", "#73a9d1", "#e49a70", "#b29be5", "#a3c982", "#e18ca2"]
+
+[theme.sidebar]
+backgroundColor = "#14201e"
+secondaryBackgroundColor = "#1b2926"
+textColor = "#e7f1ef"
+primaryColor = "#66c7b5"
+borderColor = "#304340"

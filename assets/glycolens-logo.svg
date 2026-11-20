@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">GlycoLens logo</title>
+  <desc id="desc">A teal analytical lens enclosing a rising health data signal.</desc>
+  <defs>
+    <linearGradient id="lens" x1="10" y1="8" x2="53" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#42BFA9"/>
+      <stop offset="1" stop-color="#087F72"/>
+    </linearGradient>
+  </defs>
+  <path d="M27.8 5.5a22.3 22.3 0 1 0 14.1 39.6l9.5 9.5a4 4 0 0 0 5.7-5.7l-9.5-9.5A22.3 22.3 0 0 0 27.8 5.5Z" fill="url(#lens)"/>
+  <circle cx="27.8" cy="27.8" r="16.5" fill="#F5F8F7"/>
+  <path d="M14.6 29.4h6l3.4-7.1 5.2 14 4.4-9.2 2.8 2.3h4.6" fill="none" stroke="#087F72" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="40.7" cy="29.4" r="2.1" fill="#42BFA9"/>
+</svg>
